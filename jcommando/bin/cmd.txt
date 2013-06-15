@@ -1,0 +1,5 @@
+ko bug why ?
+-d 1 -email -smtp smtp.doduck.com -login doduck -pwd mypassword
+
+ok
+-d 1 -ftp -isSftp -host myhost.com -login doduck -pwd password

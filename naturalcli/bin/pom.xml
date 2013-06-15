@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.doduck.prototype.cli</groupId>
+	<artifactId>naturalcli</artifactId>
+	<version>1</version>
+
+	<properties>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<projectNameTemplate>${project.groupId}.${project.artifactId}</projectNameTemplate>
+						<buildOutputDirectory>eclipse</buildOutputDirectory>
+						<downloadJavadocs>true</downloadJavadocs>
+						<downloadSources>true</downloadSources>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+        	<plugin>
+            	<artifactId>maven-assembly-plugin</artifactId>
+            	<configuration>
+                	<archive>
+                    	<manifest>
+                        	<addClasspath>true</addClasspath>
+                        	<mainClass>com.doduck.prototype.cli.naturalcli.Main</mainClass>
+                    	</manifest>
+                	</archive>
+                	<descriptorRefs>
+                    	<descriptorRef>jar-with-dependencies</descriptorRef>
+                	</descriptorRefs>
+            	</configuration>
+            	<executions>
+                	<execution>
+                    	<id>make-my-jar-with-dependencies</id>
+                    	<phase>package</phase>
+                    	<goals>
+                        	<goal>single</goal>
+                    	</goals>
+                	</execution>
+            	</executions>
+        	</plugin>
+    	</plugins>
+	</build>
+
+			
+	<dependencies>
+    	<dependency>
+    	  <groupId>org.eclipse</groupId>
+    	  <artifactId>paho</artifactId>
+    	  <version>1.0.0</version>
+    	  <scope>system</scope>
+    	  <systemPath>${basedir}/LIB/naturalcli-1.2.3.jar</systemPath>
+    	</dependency>
+ 	</dependencies>
+			
+	
+</project>
+
+
+

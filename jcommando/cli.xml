@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcommando>
+   <option id="sendFtp" long="sendFtp" short="sendFtp">
+      <description>send file by ftp</description>
+   </option>
+
+   <option id="isFtp" long="isFtp" short="isFtp">
+      <description>isFtp</description>
+   </option>
+   
+   <option id="isSftp" long="isSftp" short="isSftp">
+      <description>isSftp</description>
+   </option>
+
+   <option id="sendEmail" long="sendEmail" short="sendEmail">
+      <description>send file by email</description>
+   </option>
+
+   <option id="debugLever" long="debugLever" short="d" type="long">
+      <description>debug level</description>
+   </option>
+
+   <option id="smtp" long="smtp" short="smtp" type="String">
+      <description>smtp server url</description>
+   </option>
+
+    <option id="login" long="login" short="login" type="String">
+      <description>login to connect</description>
+   </option>
+
+   <option id="pwd" long="pwd" short="pwd" type="String">
+      <description>password to connect</description>
+   </option>
+
+   <option id="ftp" long="ftp" short="ftp">
+      <description>is ftp connection</description>
+   </option>
+   
+   <option id="host" long="host" short="host" type="String">
+      <description>host server url</description>
+   </option>
+
+
+
+   <commandless id="execute" allow-optionless="true">
+   	<and>
+   		<option-ref id="debugLever" />
+		   <xor>
+            <and>
+   		    	<option-ref id="sendEmail" />
+   		    	<option-ref id="smtp" />
+   		    	<option-ref id="login" />
+               <option-ref id="pwd"/>
+            </and>
+		    	
+            <and>
+               <option-ref id="sendFtp" />
+   			   <xor>
+   		    		<option-ref id="isFtp"/>
+   		    		<option-ref id="isSftp"/>
+   		    	</xor>
+   		    	<option-ref id="host"/>
+   		    	<option-ref id="login"/>
+   		    	<option-ref id="pwd"/>
+            </and>
+         </xor>
+		</and>
+   </commandless>
+
+</jcommando>

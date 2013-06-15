@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".">
+	<target name="genCLI">
+   		<taskdef name="jcommando" classname="org.jcommando.ant.JCommando">
+      		<classpath>
+         		<pathelement location="lib/jcommando.jar"/>
+      		</classpath>
+   		</taskdef>
+
+   		<jcommando inputfile="cli.xml" destdir="./src/main/java/" classname="Cli" packagename="com.doduck.prototype.jcommando"/>
+	</target>
+</project>
