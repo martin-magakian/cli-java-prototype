@@ -1,4 +1,19 @@
 cli-java-prototype
 ==================
+Exemple of code related to the article [CLI prototypes in Java](http://doduck.com/en/command-line-interface-in-java-api-overview/)
+or in French "[Command Line Interface en Java](http://doduck.com/fr/command-line-interface-en-java/)""
 
-Few prototypes using different API in order to use the CLI in Java
+
+
+Contact
+=========
+[Doduck (En) prototype on Google+](https://plus.google.com/116668777198911611361?rel=publisher)
+[Doduck (Fr) prototype sur Google+](https://plus.google.com/113202844969541158439?rel=publisher)
+
+Developed by Martin Magakian
+dev.martin.magakian@gmail.com
+
+
+License
+=========
+MIT License (MIT)
