@@ -203,8 +203,9 @@ Developed by Martin Magakian<br />
 dev.martin.magakian@gmail.com<br />
 for [doduck java prototype](http://doduck.com/)
 
-
-
 License
 =========
 MIT License (MIT)
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/eea43c3685570137e157263e4e115619 "githalytics.com")](http://githalytics.com/martin-magakian/cli-java-prototype)
