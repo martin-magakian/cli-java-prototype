@@ -24,10 +24,10 @@ Then in the console go to the project folder and run the following maven command
 > mvn eclipse:eclipse
 
 The project is now set to be import in eclipse.
-Open eclipse. Go to File > import...
+Open eclipse. Go to File > import... <br />
 ![Import CLI prototype into eclipse](/README_src/import.png "Import CLI prototype into eclipse")
 
-Select Existing project into eclipse. Click Next.
+Select Existing project into eclipse. Click Next. <br />
 ![Import CLI prototype finish](/README_src/import.png "Import CLI prototype finish")
 
 
@@ -40,8 +40,9 @@ In order to "simulate" a your program to run from eclipse with CLI parameters, y
 ![Create eclipse debug configuration 3](/README_src/createCLI_3.png "Create eclipse debug configuration 3")
 
 Now hit the debug button.
+ <br />
 
-Your can retrive your debug configuration in:
+Your can retrive your debug configuration in: <br />
 ![run debug configuration](/README_src/runCLI.png "run debug configuration")
 
 
@@ -50,7 +51,7 @@ Compile into a jar
 A executable jar need to be self-contained. It mean that all the class need to be embeded into on jar. It's also the case with third party jar (or need to be load explicitly by reflexion)
 
 The maven pom.xml files are using maven-assembly-plugin who make it easier to merge all those compiled .jar class into a single executable jar with the command:
->> mvn clean install
+> mvn clean install
 You can run this command at the root of the project to compile all the projects.
 Or you can run this command within each sub-project to compile only this sub-project.
 
