@@ -48,10 +48,11 @@ Your can retrive your debug configuration in: <br />
 
 Compile into a jar
 ---
-A executable jar need to be self-contained. It mean that all the class need to be embeded into on jar. It's also the case with third party jar (or need to be load explicitly by reflexion)
+A executable jar need to be self-contained. It mean that all the class need to be embeded into on jar. <br />
+It's also the case with third party jar (or need to be load explicitly by reflexion)
 
 The maven pom.xml files are using maven-assembly-plugin who make it easier to merge all those compiled .jar class into a single executable jar with the command:
-> mvn clean install
+> mvn clean install <br />
 You can run this command at the root of the project to compile all the projects.
 Or you can run this command within each sub-project to compile only this sub-project.
 
