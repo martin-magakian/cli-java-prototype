@@ -188,6 +188,15 @@ Result:
 > get notify with the message 'Please, see myFile.txt on the ftp' <br />
 
 
+clajr
+---
+Command:
+> java -jar clajr-1-jar-with-dependencies.jar -p ok -i
+
+Result:
+> let's print =>ok <br />
+> Here is some information
+
 Contact
 =========
 Developed by Martin Magakian<br />
