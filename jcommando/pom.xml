@@ -68,17 +68,6 @@
             <version>1</version>
         </dependency>
     </dependencies>
-
-
-	<!--<dependencies>
-    	<dependency>
-    	  <groupId>org.eclipse</groupId>
-    	  <artifactId>paho</artifactId>
-    	  <version>1.0.0</version>
-    	  <scope>system</scope>
-    	  <systemPath>${basedir}/LIB/jcommando.jar</systemPath>
-    	</dependency>
- 	</dependencies> -->
     
 </project>
 

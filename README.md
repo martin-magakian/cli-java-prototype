@@ -192,7 +192,7 @@ Contact
 =========
 Developed by Martin Magakian<br />
 dev.martin.magakian@gmail.com<br />
-for [doduck java prototype](http://doduck.com)
+for [doduck java prototype](http://doduck.com/)
 
 
 

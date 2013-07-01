@@ -52,17 +52,13 @@
     	</plugins>
 	</build>
 
-  
-  	
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.jopt-simple</groupId>
 			<artifactId>jopt-simple</artifactId>
 			<version>4.4</version>
 		</dependency>
-	</dependencies>
-			
-			
+	</dependencies>	
 			
 	
 </project>
