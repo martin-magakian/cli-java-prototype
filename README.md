@@ -53,31 +53,38 @@ It's also the case with third party jar (or need to be load explicitly by reflex
 
 The maven pom.xml files are using maven-assembly-plugin who make it easier to merge all those compiled .jar class into a single executable jar with the command:
 > mvn clean install <br />
-You can run this command at the root of the project to compile all the projects.
+
+You can run this command at the root of the project to compile all the projects. <br />
 Or you can run this command within each sub-project to compile only this sub-project.
 
-This command will create an executable into the "target" directory.
+This command will create an executable into the "target" directory.<br />
 For the sub-project "commoncli" you will find the executable jar in /cli-java-prototype/commoncli/target/commoncli-1-jar-with-dependencies.jar
 
 
 Specify the Main() of your executable jar
 ---
-When creating the executable jar you need to specify where is the Main class to run.
-Kind of the entry point using 
+When creating the executable jar you need to specify where is the Main class to run.<br />
+
+Kind of the entry point using:
+
 	public static void main(String[] args) {
 	}
-It also the maven-assembly-plugin who is in charge of specify this class to run from the CLI as the entry point.
+
+It also the maven-assembly-plugin who is in charge of specify this class to run from the CLI as the entry point.<br />
 Look into the pom.xml file of each project. You will find something like:
+
 	<archive>
 		<manifest>
 	    	<addClasspath>true</addClasspath>
 	    	<mainClass>com.doduck.prototype.cli.jcommando.Main</mainClass>
 		</manifest>
 	</archive>
-In this case the Main class is specify to be "com.doduck.prototype.cli.jcommando.Main"
 
-In reallity a jar file is just a zip file.
+In this case the Main class is specify to be "com.doduck.prototype.cli.jcommando.Main"<br />
+
+In reallity a jar file is just a zip file.<br />
 By unziping it we can notice a /META-INF/MANIFEST.MF file who contain the address of the Main class
+
 	Main-Class: com.doduck.prototype.cli.jcommando.Main
 
 who will also find the compile .java file into .class files.
@@ -90,10 +97,10 @@ Then execute the following command:
 > java -jar commoncli-1-jar-with-dependencies.jar -myCmd -helloWorld 3
 
 it should generate to following output in your console:
-> myCommand() just get call
-> Hello world !
-> Hello world !
-> Hello world !
+> myCommand() just get call <br />
+> Hello world ! <br />
+> Hello world ! <br />
+> Hello world ! <br />
 
 
 Running the CLI exemples
@@ -102,13 +109,13 @@ Running the CLI exemples
 Commoncli
 ---
 Command:
-> java -jar commoncli-1-jar-with-dependencies.jar -myCmd -helloWorld 3
+> java -jar commoncli-1-jar-with-dependencies.jar -myCmd -helloWorld 3 <br />
 
 Result:
-> myCommand() just get call
-> Hello world !
-> Hello world !
-> Hello world !
+> myCommand() just get call <br />
+> Hello world ! <br />
+> Hello world ! <br />
+> Hello world ! <br />
 
 
 Jcommando
@@ -117,23 +124,23 @@ Command:
 > java -jar jcommando-1-jar-with-dependencies.jar -d 3 -sendEmail -smtp smtp.mysrv.com -login myLogin -pwd myPwd
 
 Result:
-> send a file by Email
-> smtp:smtp.mysrv.com
-> login:myLogin
-> password:myPwd
+> send a file by Email <br />
+> smtp:smtp.mysrv.com <br />
+> login:myLogin <br />
+> password:myPwd <br />
 
 
 Command:
 > java -jar jcommando-1-jar-with-dependencies.jar -sendFtp -isSftp -host myhost.com -login myLogin -pwd mypassword -d 3
 
 Result:
-> send a file by FTP
-> over the protocole SFTP
-> host:myhost.com
-> login:myLogin
-> password:mypassword
+> send a file by FTP <br />
+> over the protocole SFTP <br />
+> host:myhost.com <br />
+> login:myLogin <br />
+> password:mypassword <br />
 
-With JCommando you can create a xml file who define your command line. See /cli-java-prototype/jcommando/cli.xml
+With JCommando you can create a xml file who define your command line. See /cli-java-prototype/jcommando/cli.xml<br />
 This file will generate class implementation "Cli.java" when you run the Ant command:
 > ant genCLI
 
@@ -145,9 +152,9 @@ Command:
 > java -jar jcommender-1-jar-with-dependencies.jar -file /path/to/file.txt -srv ftp.mySrv.com -debug
 
 Result:
-> sending file: /path/to/file.txt
-> to srv: ftp.mySrv.com
-> debug enable: true
+> sending file: /path/to/file.txt <br />
+> to srv: ftp.mySrv.com <br />
+> debug enable: true <br />
 
 jopt-simple
 ---
@@ -161,8 +168,8 @@ Command:
 > java -jar joptsimple-1-jar-with-dependencies.jar -f
 
 Result:
-> -f exist
-> -f with : null
+> -f exist <br />
+> -f with : null <br />
 
 Command:
 > java -jar joptsimple-1-jar-with-dependencies.jar -c foo
@@ -176,9 +183,9 @@ Command:
 > java -jar naturalcli-1-jar-with-dependencies.jar send file /home/doduck/myFile.txt to ftp://ftpsrv/dir notify theBoss with "Please, see myFile.txt on the ftp"
 
 Result:
-> the file '/home/doduck/myFile.txt' was sent sucessfully
-> to 'ftp://ftpsrv/dir' and the user 'theBoss'
-> get notify with the message 'Please, see myFile.txt on the ftp'
+> the file '/home/doduck/myFile.txt' was sent sucessfully <br />
+> to 'ftp://ftpsrv/dir' and the user 'theBoss' <br />
+> get notify with the message 'Please, see myFile.txt on the ftp' <br />
 
 
 Contact
