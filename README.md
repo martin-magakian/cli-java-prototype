@@ -20,8 +20,7 @@ Import project to Eclipse
 ---
 First you will need to install maven on your system.
 Then in the console go to the project folder and run the following maven command.
-> cd /path/to/folder/cli-java-prototype/ 
-
+> cd /path/to/folder/cli-java-prototype/  <br />
 > mvn eclipse:eclipse
 
 The project is now set to be import in eclipse.
