@@ -52,8 +52,25 @@
     	</plugins>
 	</build>
 
-			
-	<dependencies>
+	<repositories>
+		<repository>
+			<id>localrepository</id>
+			<url>file://${basedir}/repo</url>
+		</repository>
+	</repositories>
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org</groupId>
+            <artifactId>jcommando</artifactId>
+            <version>1</version>
+        </dependency>
+    </dependencies>
+
+
+	<!--<dependencies>
     	<dependency>
     	  <groupId>org.eclipse</groupId>
     	  <artifactId>paho</artifactId>
@@ -61,9 +78,8 @@
     	  <scope>system</scope>
     	  <systemPath>${basedir}/LIB/jcommando.jar</systemPath>
     	</dependency>
- 	</dependencies>
-			
-	
+ 	</dependencies> -->
+    
 </project>
 
 

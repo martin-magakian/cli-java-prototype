@@ -46,9 +46,6 @@ public class MyCLI extends Cli{
 	public void setPwd(String pwd) {
 		this.password = pwd;
 	}
-
-
-
 	
 	@Override
 	public void doExecute() {
@@ -68,33 +65,21 @@ public class MyCLI extends Cli{
 			System.out.println("password:"+this.password);
 		}
 	}
-
-
-
+	
 	@Override
 	public void setSendEmail() {
 		this.isSendEmail = true;
 	}
-
-
-
+	
 	@Override
 	public void setFtp() {
 		this.isSFtp = false;
 	}
 
-
-
-
-
 	@Override
 	public void setSmtp(String smtp) {
 		this.smtp = smtp;
 	}
-
-
-
-
 
 
 }

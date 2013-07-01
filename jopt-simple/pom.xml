@@ -32,7 +32,7 @@
                 	<archive>
                     	<manifest>
                         	<addClasspath>true</addClasspath>
-                        	<mainClass>com.doduck.prototype.cli.comoncli.Main</mainClass>
+                        	<mainClass>com.doduck.prototype.cli.joptsimple.Main</mainClass>
                     	</manifest>
                 	</archive>
                 	<descriptorRefs>

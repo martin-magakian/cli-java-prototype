@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Options options = new Options();
 		options.addOption("myCmd", "myCommand", false, "will run myCommand()" );
-		options.addOption("helloW", "helloWord", true, "display hello word the number of time specify" );
+		options.addOption("helloW", "helloWorld", true, "display hello world the number of time specify" );
 		
 		try{
 			CommandLine line = new BasicParser().parse( options, args );
@@ -18,11 +18,11 @@ public class Main {
 				myCommand();
 			}
 			
-			if(line.hasOption("helloWord")){
-				String repeat = line.getOptionValue("helloWord");
+			if(line.hasOption("helloWorld")){
+				String repeat = line.getOptionValue("helloWorld");
 				Integer repeatInt = new Integer(repeat);
 				for(int i =0; i<repeatInt; i++){
-					System.out.println( "Hello word !");
+					System.out.println( "Hello world !");
 				}
 			}
 			
