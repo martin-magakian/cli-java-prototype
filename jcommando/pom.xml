@@ -59,8 +59,6 @@
 		</repository>
 	</repositories>
 
-
-
     <dependencies>
         <dependency>
             <groupId>org</groupId>
