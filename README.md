@@ -207,7 +207,5 @@ License
 =========
 MIT License (MIT)
 
-![Create eclipse debug configuration 1](/README_src/createCLI_1.png "Create eclipse debug configuration 1")
-[![githalytics.com alpha](https://cruel-carlota.gopagoda.com/eea43c3685570137e157263e4e115619 "githalytics.com")](http://githalytics.com/martin-magakian/cli-java-prototype)
+![githalytics.com alpha](https://cruel-carlota.gopagoda.com/eea43c3685570137e157263e4e115619 "githalytics.com")]
 
-so ?
