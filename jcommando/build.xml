@@ -3,7 +3,7 @@
 	<target name="genCLI">
    		<taskdef name="jcommando" classname="org.jcommando.ant.JCommando">
       		<classpath>
-         		<pathelement location="lib/jcommando.jar"/>
+         		<pathelement location="repo/org/jcommando/1/jcommando-1.jar"/>
       		</classpath>
    		</taskdef>
 

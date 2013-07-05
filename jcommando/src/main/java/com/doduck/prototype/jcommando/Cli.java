@@ -105,15 +105,15 @@ public abstract class Cli extends JCommandParser
       Command execute = new Command();
       execute.setName("commandless");
       execute.setId("execute");
-      execute.addOption(sendFtp);
-      execute.addOption(debugLever);
-      execute.addOption(host);
-      execute.addOption(isSftp);
       execute.addOption(pwd);
+      execute.addOption(isSftp);
+      execute.addOption(isFtp);
       execute.addOption(login);
       execute.addOption(smtp);
-      execute.addOption(isFtp);
       execute.addOption(sendEmail);
+      execute.addOption(host);
+      execute.addOption(sendFtp);
+      execute.addOption(debugLever);
       execute.setGrouping( createExecuteGrouping() );
       addCommand(execute);
 
@@ -200,10 +200,10 @@ public abstract class Cli extends JCommandParser
       xor1.addOption(getOptionById("isFtp"));
       And and1 = new And();
       and1.getGroupings().add(xor1);
-      and1.addOption(getOptionById("sendFtp"));
       and1.addOption(getOptionById("pwd"));
-      and1.addOption(getOptionById("host"));
       and1.addOption(getOptionById("login"));
+      and1.addOption(getOptionById("host"));
+      and1.addOption(getOptionById("sendFtp"));
       And and2 = new And();
       and2.addOption(getOptionById("pwd"));
       and2.addOption(getOptionById("login"));
