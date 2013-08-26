@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Options options = new Options();
 		options.addOption("myCmd", "myCommand", false, "will run myCommand()" );
-		options.addOption("helloW", "helloWorld", true, "display hello world the number of time specify" );
+		options.addOption("helloW", "helloWorld", true, "display hello world the number of time specified" );
 		
 		try{
 			CommandLine line = new BasicParser().parse( options, args );
@@ -32,7 +32,7 @@ public class Main {
 	}
 
 	public static void myCommand(){
-		System.out.println("myCommand() just get call");
+		System.out.println("myCommand() just get called");
 	}
 	
 }

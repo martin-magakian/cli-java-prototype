@@ -12,6 +12,7 @@ public class Main {
 		System.out.println("sending file: "+uploader.getFile());
 		System.out.println("to srv: "+uploader.getSrv());
 		System.out.println("debug enable: "+uploader.isDebug());
+		
 	}
 	
 }

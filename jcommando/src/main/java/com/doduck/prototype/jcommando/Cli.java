@@ -105,15 +105,15 @@ public abstract class Cli extends JCommandParser
       Command execute = new Command();
       execute.setName("commandless");
       execute.setId("execute");
-      execute.addOption(pwd);
-      execute.addOption(isSftp);
       execute.addOption(isFtp);
-      execute.addOption(login);
-      execute.addOption(smtp);
       execute.addOption(sendEmail);
+      execute.addOption(debugLever);
       execute.addOption(host);
       execute.addOption(sendFtp);
-      execute.addOption(debugLever);
+      execute.addOption(pwd);
+      execute.addOption(login);
+      execute.addOption(isSftp);
+      execute.addOption(smtp);
       execute.setGrouping( createExecuteGrouping() );
       addCommand(execute);
 
@@ -196,19 +196,19 @@ public abstract class Cli extends JCommandParser
    private Grouping createExecuteGrouping()
    {
       Xor xor1 = new Xor();
-      xor1.addOption(getOptionById("isSftp"));
       xor1.addOption(getOptionById("isFtp"));
+      xor1.addOption(getOptionById("isSftp"));
       And and1 = new And();
       and1.getGroupings().add(xor1);
-      and1.addOption(getOptionById("pwd"));
-      and1.addOption(getOptionById("login"));
       and1.addOption(getOptionById("host"));
       and1.addOption(getOptionById("sendFtp"));
+      and1.addOption(getOptionById("pwd"));
+      and1.addOption(getOptionById("login"));
       And and2 = new And();
+      and2.addOption(getOptionById("sendEmail"));
       and2.addOption(getOptionById("pwd"));
       and2.addOption(getOptionById("login"));
       and2.addOption(getOptionById("smtp"));
-      and2.addOption(getOptionById("sendEmail"));
       Xor xor2 = new Xor();
       xor2.getGroupings().add(and2);
       xor2.getGroupings().add(and1);
