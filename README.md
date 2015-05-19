@@ -1,5 +1,6 @@
 cli-java-prototype
 ==================
+
 Exemple of code related to the article [CLI prototypes in Java](http://doduck.com/en/command-line-interface-in-java-api-overview/) <br />
 or in French [Command Line Interface en Java](http://doduck.com/fr/command-line-interface-en-java/) <br />
 
@@ -208,5 +209,6 @@ License
 =========
 MIT License (MIT)
 
-![githalytics.com alpha](https://cruel-carlota.gopagoda.com/eea43c3685570137e157263e4e115619 "githalytics.com")
+by [Anomaly Detection](https://anomaly.io)
+
 
